@@ -44,9 +44,7 @@
       <tr>
         <td>加密结果</td>
         <td>
-          <textarea rows="5" cols="65" id="encrypted">
-请输入公钥及内容</textarea
-          >
+          <textarea rows="5" cols="65" id="encrypted">请输入公钥及内容</textarea>
         </td>
         <td>
           <button
@@ -61,9 +59,7 @@
       <tr>
         <td>签名值</td>
         <td>
-          <textarea rows="5" cols="65" id="signature">
-请输入私钥及内容</textarea
-          >
+          <textarea rows="5" cols="65" id="signature">请输入私钥及内容</textarea>
         </td>
         <td>
           <button
@@ -104,9 +100,7 @@
       <tr>
         <td>解密结果</td>
         <td>
-          <textarea rows="5" cols="65" id="decrypted">
-请输入私钥及内容</textarea
-          >
+          <textarea rows="5" cols="65" id="decrypted">请输入私钥及内容</textarea>
         </td>
         <td>
           <button
@@ -122,7 +116,7 @@
     <h2>验证签名</h2>
     <table>
       <tr>
-        <td>对方公钥（用于验证签名）</td>
+        <td style="width: 400px">对方公钥（用于验证签名）</td>
         <td>
           <textarea
             rows="5"
@@ -7329,7 +7323,7 @@
               "签名失败，请检查私钥是否正确";
           } else {
             document.getElementById("signature").innerHTML =
-              signature + "\n----- 这是签名值（复制不影响解密）-----";
+              signature + "\n----- 这是签名值（复制不影响验证）-----";
           }
         } else {
           document.getElementById("signature").innerHTML = "请输入私钥及内容";
