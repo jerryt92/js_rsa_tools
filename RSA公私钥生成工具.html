@@ -1582,8 +1582,15 @@
             }, 50);
         }).then(function (e) {
             // 去除换行符
-            document.getElementById('area_private_key').value = e[0].replace(/\n*/g,"");
-            document.getElementById('area_public_key').value = e[1].replace(/\n*/g,"");
+            e[0]=e[0].replace(/\n*/g,"");
+            e[1]=e[1].replace(/\n*/g,"")
+            // 矫正格式
+            e[0]=e[0].replace("-----BEGIN RSA PRIVATE KEY-----","-----BEGIN RSA PRIVATE KEY-----\n");
+            e[0]=e[0].replace("-----END RSA PRIVATE KEY-----","\n-----END RSA PRIVATE KEY-----");
+            e[1]=e[1].replace("-----BEGIN PUBLIC KEY-----","-----BEGIN PUBLIC KEY-----\n")
+            e[1]=e[1].replace("-----END PUBLIC KEY-----","\n-----END PUBLIC KEY-----")
+            document.getElementById('area_private_key').value = e[0];
+            document.getElementById('area_public_key').value = e[1];
             if (btn) btn.innerText = '生成密钥';
         });
     }
