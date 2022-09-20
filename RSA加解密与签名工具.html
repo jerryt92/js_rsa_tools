@@ -1,12 +1,12 @@
 <html lang="zh_CN">
   <head>
     <meta charset="UTF-8" />
-    <title>RSA加密解密</title>
+    <title>RSA加解密与签名工具</title>
   </head>
   <body>
-    <h1>RSA可靠消息传输工具</h1>
+    <h1>RSA加解密与签名工具</h1>
     <hr />
-    <h2>加密及签名</h2>
+    <h2>加密及签名「SHA256withRSA」</h2>
     <table>
       <tr>
         <td style="width: 400px">对方公钥（用于加密，可不填）</td>
@@ -113,7 +113,7 @@
         </td>
       </tr>
     </table>
-    <h2>验证签名</h2>
+    <h2>验证签名「SHA256withRSA」</h2>
     <table>
       <tr>
         <td style="width: 400px">对方公钥（用于验证签名）</td>
@@ -7313,7 +7313,8 @@
       function rsaSign() {
         var jsEncrypt = new JSEncrypt();
         let privateKey = document.getElementById("sign_private_key").value;
-        let message = document.getElementById("message").value;
+        // 抹除换行符和空格后签名
+        let message = document.getElementById("message").value.replace(/\n*/g, "").replace(/\s+/g, "");
 
         if (message.length > 0 && privateKey.length > 0) {
           jsEncrypt.setPrivateKey(privateKey);
@@ -7352,7 +7353,8 @@
         var jsEncrypt = new JSEncrypt();
         let publicKey = document.getElementById("sign_public_key").value;
         let signature = document.getElementById("verify_signature").value;
-        let message = document.getElementById("verify_message").value;
+        // 抹除换行符和空格后验签
+        let message = document.getElementById("verify_message").value.replace(/\n*/g, "").replace(/\s+/g, "");
         if (
           publicKey.length > 0 &&
           signature.length > 0 &&
