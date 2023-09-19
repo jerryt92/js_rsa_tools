@@ -16,7 +16,7 @@ RSA公私钥生成工具
 
    项目地址：[https://github.com/travist/jsencrypt](https://github.com/travist/jsencrypt)
 
-   MIT License (MIT)
+   MIT License
 
 2. SHA-256加密功能
 
@@ -24,7 +24,7 @@ RSA公私钥生成工具
 
    项目地址：[https://www.cdnpkg.com/crypto-js/file/crypto-js.min.js/](https://www.cdnpkg.com/crypto-js/file/crypto-js.min.js/)
 
-   MIT License (MIT)
+   MIT License
 
 4. 一键复制功能
 
@@ -32,7 +32,7 @@ RSA公私钥生成工具
 
    项目地址：[https://clipboardjs.com](https://clipboardjs.com)
 
-   MIT License (MIT)
+   MIT License
 
 <hr/>
 
