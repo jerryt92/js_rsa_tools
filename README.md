@@ -24,7 +24,9 @@ RSA公私钥生成工具
 
    项目地址：[https://www.cdnpkg.com/crypto-js/file/crypto-js.min.js/](https://www.cdnpkg.com/crypto-js/file/crypto-js.min.js/)
 
-3. 一键复制功能
+   MIT License (MIT)
+
+4. 一键复制功能
 
    项目名称：clipboard.js
 
